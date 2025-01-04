@@ -30,7 +30,7 @@ jobs:
             -H "Client-Secret: ${{ secrets.INTRUCEPT_CLIENT_SECRET }}" \
             -F "projectZipFile=@project.zip" \
             -F "applicationId=${{ secrets.INTRUCEPT_APPLICATION_ID }}" \
-            -F "scanName=Kotlin SAST Scan - ${{ github.sha }}" \
+            -F "scanName=Goatlin SAST Scan - ${{ github.sha }}" \
             -F "language=kotlin" \
             https://appsecops-api.intruceptlabs.com/api/v1/integrations/sast-scans)
           
@@ -44,5 +44,3 @@ jobs:
              echo "Vulnerabilities Table:"
              echo "$VULNS_TABLE"
           fi 
-      
-          
